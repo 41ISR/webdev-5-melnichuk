@@ -1,0 +1,42 @@
+.movie-details{
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-areas: 't t' 'pl img' 'inf img' 'ppl img';
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 3rem;
+}
+.back{
+    position: absolute;
+    left: 2rem;
+    top: 5rem;
+    cursor: pointer;
+}
+
+.movie-details__title{
+    grid-area: t;
+}
+.movie-details__plot{
+    grid-area: pl;
+}
+.movie-details__image{
+    grid-area: img;
+    height: 100%;
+    width: auto;
+    justify-self: center;
+}
+.movie-details__info{
+    grid-area: inf;
+    
+    .movie-details__info__rating__rate{
+        
+        &::before{
+            content: '>';
+            margin-right: 1rem;
+            margin-left: .5rem;
+        }
+    }
+}
+.movie-details__people{
+    grid-area: ppl;
+}
